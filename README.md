@@ -59,6 +59,7 @@ The project follows the typical data analytics pipeline:
 ## Challenges Faced
 - **Data Cleaning**: Dealt with duplicate values.
 - **Robust loading**: Optimized code to ignore already loaded data and load new data without errors.
+- **compactibility issues**: my snowpark was not compatitble with my pandas version, so it caused errors. it was an interesting issue to resolve. updating my snowpark to the latest version fixed it.
 
 ## Future Improvements
 - use snowflake streams for delta loads
