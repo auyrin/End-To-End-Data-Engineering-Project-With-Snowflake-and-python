@@ -51,11 +51,10 @@ The project follows the typical data analytics pipeline:
 2. create database and schemas
 3. create internal stages and file formats
 4. load data to internal stage
-5. create tables, and sequences
-6. load data from internal stage to source tables
-7. load data from source to curated
-8. load data from curated to consumption
-9. could create dashboards etc
+5. load data from internal stage to source tables
+6. load data from source to curated
+7. load data from curated to consumption
+8. could create dashboards etc
 
 ## Challenges Faced
 - **Data Cleaning**: Dealt with duplicate values.
