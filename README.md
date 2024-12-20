@@ -46,7 +46,7 @@ The project uses a publicly available e-commerce dataset containing:
 - **Tools**: vscode, Snowflake
 
 ## Project Architecture
-The project follows the typical data analytics pipeline:
+The project follows the typical ETL pipeline:
 1. establish snowpark connection
 2. create database and schemas
 3. create internal stages and file formats
