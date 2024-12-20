@@ -1,0 +1,41 @@
+-- create virtual warehouse
+use role sysadmin;
+CREATE WAREHOUSE SNOWPARK_ETL_WH
+    WITH
+    warehouse_size = 'medium'
+    warehouse_type = 'standard'
+    auto_suspend = 60
+    auto_resume = true
+    min_cluster_count = 1
+    max_cluster_count = 1
+    scaling_policy = 'standard';
+
+
+-- create snowpark user
+use role accountadmin;
+CREATE USER SNOWPARK_USER
+    password = 'baby123'
+    comment = 'this is a snowpark user'
+    default_role = sysadmin
+    default_secondary_roles = ('ALL')
+    must_change_password = false;
+
+
+-- grants
+grant role sysadmin to user snowpark_user;
+grant usage on warehouse snowpark_etl_wh to role sysadmin;
+
+GRANT usage ON DATABASE SALES_DWH to role sysadmin;
+grant all privileges on schema sales_dwh.source to role sysadmin;
+GRANT READ ON STAGE sales_dwh.source.internal_stage TO ROLE sysadmin;
+GRANT WRITE ON STAGE sales_dwh.source.internal_stage TO ROLE sysadmin;
+
+show grants to user snowpark_user;
+
+
+
+
+
+
+    
+    
