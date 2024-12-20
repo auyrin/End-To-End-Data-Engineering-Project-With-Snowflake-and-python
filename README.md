@@ -41,7 +41,7 @@ The project uses a publicly available e-commerce dataset containing:
 - 'Mobile Model': model of phone
 
 ## Technologies Used
-- **Programming Languages**: Python, SQL, snowsql
+- **Programming Languages**: Python, SQL, SnowSQL
 - **Libraries**: Pandas, snowflake.snowpark, os, logging, sys
 - **Tools**: vscode, Snowflake
 
